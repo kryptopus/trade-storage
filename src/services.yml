@@ -1,0 +1,14 @@
+services:
+    # Command to list available storage builders
+    kryptopus_command_list_trade_storage_builders:
+        class: "application/command/ListBuildersCommand"
+        arguments:
+            - "@kryptopus_trade_storage_builder_registry"
+        tags:
+            - { name: "solfege.console.command" }
+
+    # Storage builder registry
+    kryptopus_trade_storage_builder_registry:
+        class: "domain/StorageBuilderRegistry"
+
+

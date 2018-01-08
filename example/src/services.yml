@@ -1,0 +1,5 @@
+services:
+    example_storage_builder:
+        class: "Builder"
+        tags:
+            - { name: kryptopus.trade_storage_builder, builder_id: foo }
